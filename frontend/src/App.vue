@@ -6,19 +6,15 @@ import MainNav from "./components/navigation/MainNav.vue";
 </script>
 
 <template>
-    <header class="main-heade">
-        <p>This is header</p>
-    </header>
-    <nav class="main-nav">
-        <MainNav />
-    </nav>
-    <div class="content">
+    <header class="main-header"></header>
+    <MainNav />
+    <article class="content">
         <router-view v-slot="{ Component }">
             <transition name="fade" mode="out-in">
-                <component :is="Component"></component>
+                <component :is="Component" />
             </transition>
         </router-view>
-    </div>
+    </article>
 </template>
 
 <style>
@@ -27,26 +23,23 @@ import MainNav from "./components/navigation/MainNav.vue";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-header, nav {
-    text-align: center;
-}
 .content {
-    width: 40%;
-    min-width: 502px;
     margin: 0 auto;
     position: relative;
     text-align: left;
 }
+
+/* Transitions */
 .fade-enter-from {
     opacity: 0;
-    transform: translateX(100px);
+    @apply transform translate-x-28;
 }
 .fade-enter-active {
     transition: 0.3s ease-out;
 }
 .fade-leave-to {
     opacity: 1;
-    transform: translateX(-100px);
+    @apply transform -translate-x-28;
 }
 .fade-leave-active {
     transition: all 0.3s ease-in;
