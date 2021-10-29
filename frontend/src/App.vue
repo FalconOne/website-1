@@ -3,18 +3,18 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { ref } from "vue";
 import MainNav from "./components/navigation/MainNav.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
     <header class="main-header"></header>
     <MainNav />
-    <article class="content">
-        <router-view v-slot="{ Component }">
-            <transition name="fade" mode="out-in">
-                <component :is="Component" />
-            </transition>
-        </router-view>
-    </article>
+    <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+            <component :is="Component" />
+        </transition>
+    </router-view>
+    <Footer />
 </template>
 
 <style>
@@ -24,22 +24,19 @@ import MainNav from "./components/navigation/MainNav.vue";
     -moz-osx-font-smoothing: grayscale;
 }
 .content {
-    margin: 0 auto;
-    position: relative;
-    text-align: left;
+    @apply w-full mt-0 mb-0 mx-auto relative text-center;
 }
-
 /* Transitions */
 .fade-enter-from {
-    opacity: 0;
-    @apply transform translate-x-28;
+    /* @apply opacity-0 transform translate-x-28; */
+    @apply opacity-0;
 }
 .fade-enter-active {
     transition: 0.3s ease-out;
 }
 .fade-leave-to {
-    opacity: 1;
-    @apply transform -translate-x-28;
+    /* @apply opacity-100 transform -translate-y-28; */
+    @apply opacity-100;
 }
 .fade-leave-active {
     transition: all 0.3s ease-in;
