@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { ref } from "vue";
 import MainNav from "./components/navigation/MainNav.vue";
 import Footer from "./components/Footer.vue";
 </script>
@@ -14,7 +13,9 @@ import Footer from "./components/Footer.vue";
             <component :is="Component" />
         </transition>
     </router-view>
-    <Footer />
+    <transition name="fade" mode="out-in">
+        <Footer />
+    </transition>
 </template>
 
 <style>
@@ -22,9 +23,6 @@ import Footer from "./components/Footer.vue";
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-.content {
-    @apply w-full mt-0 mb-0 mx-auto relative text-center;
 }
 /* Transitions */
 .fade-enter-from {

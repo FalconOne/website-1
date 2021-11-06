@@ -2,89 +2,183 @@
     <div class="home">
         <div class="hero">
             <div class="content">
-                <img src="../assets/img/ant-profile-pic.jpg" alt="Antenh" width="100" height="100" />
-                <h1>
-                    Hello,
-                    <br />Name is Antenh
-                </h1>
-                <p>
-                    I'm a Full Stack Web Developer and eCommerce Specifalist.
-                    <br />Backend systems arcitect and front-end prefectionist.
-                </p>
+                <div class="heading">
+                    <figure>
+                        <img
+                            src="../assets/img/ant-profile-pic.jpg"
+                            alt="Antenh"
+                            width="100"
+                            height="100"
+                        />
+                    </figure>
+                    <h1>
+                        Hello,
+                        <br />My name is Antenh
+                    </h1>
+                </div>
+                <h2>Full Stack Web Developer and eCommerce Specifalist.</h2>
+                <div class="btn-container">
+                    <router-link :to="{ name: 'about' }" class="btn learn-more"
+                        >Learn More</router-link
+                    >
+                    <router-link :to="{ name: 'contact' }" class="btn contact"
+                        >Contact Me</router-link
+                    >
+                </div>
             </div>
         </div>
-        <div class="summary hidden">
+        <div class="summary">
             <div class="content">
-                <h2>Technical Summary</h2>
-                <p>10+ years of experience</p>
-                <p></p>
-                <p></p>
+                <h2>Summary</h2>
+                <p>11+ years of experience, specializing in eCommerce for past 8+ years</p>
+                <p>UI / UX Design & Development, Responsive, Accessable, Crisp & Tested</p>
+                <p>CMS & Payment Systems Integration</p>
             </div>
         </div>
         <div class="experience">
             <div class="content">
+                <h2 class="title">Tech Experience</h2>
                 <div class="section">
-                    <h3>Summary</h3>
+                    <h3>Backend</h3>
+                    <span><img src="../assets/icons/aws-logo.svg" alt="">AWS</span>
+                    <span><img src="../assets/icons/linode-1.svg" alt="">Linode</span>
+                    <hr>
+                    <span><img src="../assets/icons/ubuntu-icon.svg" alt="">Ubuntu</span>
+                    <span><img src="../assets/icons/microsoft-windows-22.svg" alt="">Windows</span>
+                    <span><img src="../assets/icons/apple.svg" alt="">Mac OS</span>
+                    <hr>
+                    <span><img src="../assets/icons/apache-seeklogo.com.svg" alt="">Apache</span>
+                    <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="">NGINX</span>
+                    <span><img src="../assets/icons/mysql-svgrepo-com.svg" alt="">MySQL</span>
+                    <span><img src="../assets/icons/nodejs-icon.svg" alt="">Node.js</span>
+                    <hr>
+                    <span><img src="../assets/icons/php-1.svg" alt="">PHP</span>
+                    <span><img src="../assets/icons/python-svgrepo-com.svg" alt="">Python</span>
+                    <span><img src="../assets/icons/java-14.svg" alt="">Java</span>
+                    <hr>
+                    <span><img src="../assets/icons/laravel-svgrepo-com.svg" alt="">Laravel</span>
+                    <span><img src="../assets/icons/symfony-svgrepo-com.svg" alt="">Symfony</span>
+                    <span><img src="../assets/icons/magento-2.svg" alt="">Magento</span>
+                    <span><img src="../assets/icons/wordpress-icon-1.svg" alt="">WordPress</span>
+                    <span><img src="../assets/icons/django.svg" alt="">Django</span>
+                    <span><img src="../assets/icons/yii.svg" alt="Yii">Yii</span>
+                    <hr>
+                    <span><img src="../assets/icons/docker.svg" alt="">Docker</span>
+                    <span><img src="../assets/icons/vagrant.svg" alt="">Vagrant</span>
+                    <span><img src="../assets/icons/virtualbox.svg" alt="">VirtualBox</span>
                 </div>
                 <div class="section">
                     <h3>Frontend</h3>
+                    <span><img src="../assets/icons/html-1.svg" alt="">HTML 5</span>
+                    <span><img src="../assets/icons/css-3.svg" alt="">CSS</span>
+                    <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span>
+                    <hr>
+                    <span><img src="../assets/icons/logo-javascript.svg" alt="">JavaScript</span>
+                    <span><img src="../assets/icons/vue-9.svg" alt="">Vue.js</span>
+                    <span><img src="../assets/icons/jquery-4.svg" alt="jQuery">jQuery</span>
+                    <span><img src="../assets/icons/backbone-js.svg" alt="">Backbone.js</span>
+                    <hr>
+                    <span><img src="../assets/icons/tailwind-css-2.svg" alt="">Tailwindcss</span>
+                    <span><img src="../assets/icons/bootstrap-5-1.svg" alt="">Bootstrap</span>
                 </div>
-            </div>
-            <div class="experience-wave-devider">
-                <svg
-                    data-name="Layer 1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                >
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"
-                    />
-                </svg>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+.home {
+    @apply flex flex-col justify-center items-center relative;
+    * {
+        @apply z-30;
+    }
+}
 .hero {
-    @apply w-full p-2;
+    @apply flex flex-col justify-center items-center w-full p-0;
+    .content {
+        @apply flex flex-row flex-wrap justify-center items-center p-6;
+        .heading {
+            @apply flex flex-row flex-wrap justify-evenly items-center w-full;
+            img {
+                @apply rounded-full w-32;
+            }
+            h1 {
+                @apply text-5xl text-center bg-gradient-to-r from-pink-200 to-purple-300 bg-clip-text text-transparent;
+            }
+        }
+        h2 {
+            @apply w-full mt-10 text-center rounded;
+        }
+        .btn-container {
+            @apply mt-10;
+            a {
+                @apply py-2 px-4 relative text-sm rounded-sm shadow-md bg-blue-900 
+                    transition transform-gpu duration-150 ease-in-out scale-110;
+                &::before {
+                    content: "";
+                    @apply absolute top-0 left-0 w-full h-full z-10 bg-gray-700 bg-opacity-5 transition-all duration-300;
+                }
+                &::after {
+                    content: "";
+                    @apply absolute top-0 left-0 w-full h-full z-10 opacity-0 transition-all duration-300 border-2 rounded-sm border-indigo-400 transform-gpu scale-110;
+                }
+                &:hover,
+                &:focus {
+                    @apply transform scale-110 bg-pink-100 text-indigo-900 underline;
+                    transform: scale(1, 1);
+                }
+                &:hover::before,
+                &:focus::before {
+                    @apply opacity-0 transform-gpu scale-50;
+                }
+                &:hover::after,
+                &:focus::after {
+                    @apply opacity-100 transform-gpu scale-100;
+                }
+                &:last-child {
+                    @apply ml-3;
+                }
+            }
+        }
+    }
 }
-.hero > .content > img {
-    @apply rounded-full w-32 mx-auto;
-}
-.hero > .content > h1 {
-    @apply mt-10 text-5xl;
-}
-.hero > .content > p {
-    @apply mt-10;
+.summary {
+    @apply flex flex-col justify-center items-center w-full bg-gradient-to-r from-blue-700 to-blue-800;
+    .content {
+        @apply flex flex-col flex-wrap justify-center items-center;
+        p {
+            @apply h-full mt-2 pb-2 text-center leading-3;
+        }        
+    }
 }
 .experience {
-    @apply relative w-full bg-gradient-to-r from-blue-900 to-blue-600 mt-10 pt-7 ;
+    @apply flex flex-col justify-center items-center relative w-full;
+    .content {
+        @apply flex flex-row flex-wrap justify-around items-start;
+        .section {
+            @apply md:w-1/2 flex flex-row flex-wrap justify-center text-center;
+            h3 {
+                @apply w-full;
+            }
+            span {
+                @apply flex items-center px-2 py-1;
+            }
+            hr {
+                @apply w-full;
+            }
+            p {
+                @apply text-left mt-5;
+            }
+            img {
+                @apply inline-block h-5 mr-1
+            }
+        }
+    }
 }
-.experience > .content {
-    @apply grid grid-cols-2;
+.content {
+    @apply max-w-4xl p-6;
 }
-.experience > .content > .section {
-    @apply w-full p-4;
+.title {
+    @apply w-full text-center; 
 }
-.experience-wave-devider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-.experience-wave-devider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-}
-
-.experience-wave-devider .shape-fill {
-    @apply fill-current text-gray-800
-}         
 </style>

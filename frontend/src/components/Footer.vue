@@ -1,17 +1,16 @@
 <template>
     <footer>
-        <div clas="content">
-            <ul>
-                <li><a href="" title="">Home</a></li>
-                <li><a href="" title="">Contact</a></li>
-                <li><a href="" title="">Examples</a></li>
-            </ul>
+        <div class="content">
+            <p class="copyright">Copyright&copy; 2021 www.callmeant.com</p>
         </div>
     </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
-    @apply w-screen bg-gray-900 max-w-6xl text-center text-sm;
+    @apply flex flex-row justify-center items-center relative w-screen bg-gray-900 max-w-6xl text-center text-sm;
+    .content {
+        @apply flex flex-col flex-wrap z-50 text-sm text-center;
+    }
 }
 </style>
