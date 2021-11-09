@@ -37,19 +37,22 @@
         </div>
         <div class="experience">
             <div class="content">
-                <h2 class="title">Tech Experience</h2>
+                <h2 class="title">Technical Experience</h2>
                 <div class="section">
                     <h3>Backend</h3>
                     <span><img src="../assets/icons/aws-logo.svg" alt="">AWS</span>
                     <span><img src="../assets/icons/linode-1.svg" alt="">Linode</span>
                     <hr>
                     <span><img src="../assets/icons/ubuntu-icon.svg" alt="">Ubuntu</span>
+                    <span><img src="../assets/icons/centos-1.svg" alt="CentOS">Cent OS</span>
                     <span><img src="../assets/icons/microsoft-windows-22.svg" alt="">Windows</span>
                     <span><img src="../assets/icons/apple.svg" alt="">Mac OS</span>
+                    <span><img src="../assets/icons/command-line_115191.svg" alt="Command Line">Command Line</span>
                     <hr>
                     <span><img src="../assets/icons/apache-seeklogo.com.svg" alt="">Apache</span>
                     <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="">NGINX</span>
                     <span><img src="../assets/icons/mysql-svgrepo-com.svg" alt="">MySQL</span>
+                    <span><img src="../assets/icons/sqlite_logo_icon_169724.svg" alt="SQLite">SQLite</span>
                     <span><img src="../assets/icons/nodejs-icon.svg" alt="">Node.js</span>
                     <hr>
                     <span><img src="../assets/icons/php-1.svg" alt="">PHP</span>
@@ -66,20 +69,28 @@
                     <span><img src="../assets/icons/docker.svg" alt="">Docker</span>
                     <span><img src="../assets/icons/vagrant.svg" alt="">Vagrant</span>
                     <span><img src="../assets/icons/virtualbox.svg" alt="">VirtualBox</span>
+                    <hr>
                 </div>
                 <div class="section">
                     <h3>Frontend</h3>
-                    <span><img src="../assets/icons/html-1.svg" alt="">HTML 5</span>
-                    <span><img src="../assets/icons/css-3.svg" alt="">CSS</span>
-                    <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span>
-                    <hr>
                     <span><img src="../assets/icons/logo-javascript.svg" alt="">JavaScript</span>
                     <span><img src="../assets/icons/vue-9.svg" alt="">Vue.js</span>
                     <span><img src="../assets/icons/jquery-4.svg" alt="jQuery">jQuery</span>
                     <span><img src="../assets/icons/backbone-js.svg" alt="">Backbone.js</span>
                     <hr>
+                    <span><img src="../assets/icons/html-1.svg" alt="">HTML 5</span>
+                    <span><img src="../assets/icons/css-3.svg" alt="">CSS</span>
+                    <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span>
+                    <hr>
                     <span><img src="../assets/icons/tailwind-css-2.svg" alt="">Tailwindcss</span>
                     <span><img src="../assets/icons/bootstrap-5-1.svg" alt="">Bootstrap</span>
+                    <hr>
+                    <h3>Development Tools</h3>
+                    <span><img src="../assets/icons/vscode_icon_130084.svg" alt="VS Code">VS Code</span>
+                    <span><img src="../assets/icons/phpstorm-1.svg" alt="PhpStorm">PhpStorm</span>
+                    <span><img src="../assets/icons/sublime-text.svg" alt="Sublime Text">Sublime Text</span>
+                    <span><img src="../assets/icons/mysqlworkbench_93532.svg" alt="MySQL Workbench">MySQL Workbench</span>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -147,7 +158,7 @@
     .content {
         @apply flex flex-col flex-wrap justify-center items-center;
         p {
-            @apply h-full mt-2 pb-2 text-center leading-3;
+            @apply h-full mt-2 text-center leading-6;
         }        
     }
 }
@@ -156,15 +167,17 @@
     .content {
         @apply flex flex-row flex-wrap justify-around items-start;
         .section {
-            @apply md:w-1/2 flex flex-row flex-wrap justify-center text-center;
+            @apply md:w-1/2 mt-5 flex flex-row flex-wrap justify-center text-center;
             h3 {
-                @apply w-full;
+                @apply w-full p-2 ;
             }
             span {
                 @apply flex items-center px-2 py-1;
             }
             hr {
-                @apply w-full;
+                @apply w-full border-0;
+                height: 2px;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(180, 83, 9, 42%), rgba(0, 0, 0, 0));
             }
             p {
                 @apply text-left mt-5;
