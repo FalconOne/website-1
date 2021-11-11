@@ -31,8 +31,8 @@
             <div class="content">
                 <h2>Summary</h2>
                 <p>11+ years of experience, specializing in eCommerce for past 8+ years</p>
-                <p>UI / UX Design & Development, Responsive, Accessable, Crisp & Tested</p>
-                <p>CMS & Payment Systems Integration</p>
+                <p>Backend web application; Responsive websites for Mobile and Tablet devices with Accessablity in mind</p>
+                <p>API Integrations: Payment Systems & Content Management System (CMS)</p>
             </div>
         </div>
         <div class="experience">
@@ -84,12 +84,13 @@
                     <hr>
                     <span><img src="../assets/icons/tailwind-css-2.svg" alt="">Tailwindcss</span>
                     <span><img src="../assets/icons/bootstrap-5-1.svg" alt="">Bootstrap</span>
-                    <hr>
+                    <hr>                 
                     <h3>Development Tools</h3>
-                    <span><img src="../assets/icons/vscode_icon_130084.svg" alt="VS Code">VS Code</span>
                     <span><img src="../assets/icons/phpstorm-1.svg" alt="PhpStorm">PhpStorm</span>
+                    <span><img src="../assets/icons/vscode_icon_130084.svg" alt="VS Code">VS Code</span>
                     <span><img src="../assets/icons/sublime-text.svg" alt="Sublime Text">Sublime Text</span>
                     <span><img src="../assets/icons/mysqlworkbench_93532.svg" alt="MySQL Workbench">MySQL Workbench</span>
+                    <span><img src="../assets/icons/postman.svg" alt="Postman">Postman</span>
                     <hr>
                 </div>
             </div>
@@ -167,9 +168,9 @@
     .content {
         @apply flex flex-row flex-wrap justify-around items-start;
         .section {
-            @apply md:w-1/2 mt-5 flex flex-row flex-wrap justify-center text-center;
+            @apply md:w-1/2 flex flex-row flex-wrap justify-center text-center;
             h3 {
-                @apply w-full p-2 ;
+                @apply w-full mt-5 p-2 ;
             }
             span {
                 @apply flex items-center px-2 py-1;
