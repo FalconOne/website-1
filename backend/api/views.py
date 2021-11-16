@@ -1,5 +1,6 @@
+from django.http.response import HttpResponseForbidden
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse, response
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -11,7 +12,7 @@ def index(request):
 @csrf_exempt
 def contact(request):
     if request.method == "POST":
-        req = json.loads(request.body)       
+        req = json.loads(request.body)
 
         first_name = req['first_name']
         last_name  = req['last_name']
@@ -36,3 +37,5 @@ def contact(request):
         else:
             res = "invalid request. Please fill required fields."
             return JsonResponse({"error": res}, status=400)
+    else:
+        return HttpResponseForbidden()
