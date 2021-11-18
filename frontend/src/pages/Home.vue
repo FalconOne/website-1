@@ -12,18 +12,13 @@
                         />
                     </figure>
                     <h1>
-                        Hello,
-                        <br />My name is Antenh
+                        Hello,<br />My name is Antenh
                     </h1>
                 </div>
                 <h2>Full Stack Web Developer and eCommerce Specifalist.</h2>
                 <div class="btn-container">
-                    <router-link :to="{ name: 'about' }" class="btn learn-more"
-                        >Learn More</router-link
-                    >
-                    <router-link :to="{ name: 'contact' }" class="btn contact"
-                        >Contact Me</router-link
-                    >
+                    <router-link :to="{ name: 'about' }" class="btn learn-more">Learn More</router-link>
+                    <router-link :to="{ name: 'contact' }" class="btn contact">Contact Me</router-link>
                 </div>
             </div>
         </div>
@@ -40,51 +35,51 @@
                 <h2 class="title">Technical Experience</h2>
                 <div class="section">
                     <h3>Backend</h3>
-                    <span><img src="../assets/icons/aws-logo.svg" alt="">AWS</span>
-                    <span><img src="../assets/icons/linode-1.svg" alt="">Linode</span>
+                    <span><img src="../assets/icons/aws-logo.svg" alt="AWS">AWS</span>
+                    <span><img src="../assets/icons/linode-1.svg" alt="Linode">Linode</span>
                     <hr>
-                    <span><img src="../assets/icons/ubuntu-icon.svg" alt="">Ubuntu</span>
-                    <span><img src="../assets/icons/centos-1.svg" alt="CentOS">Cent OS</span>
-                    <span><img src="../assets/icons/microsoft-windows-22.svg" alt="">Windows</span>
-                    <span><img src="../assets/icons/apple.svg" alt="">Mac OS</span>
+                    <span><img src="../assets/icons/ubuntu-icon.svg" alt="Ubuntu">Ubuntu</span>
+                    <span><img src="../assets/icons/centos-1.svg" alt="CentOS">CentOS</span>
+                    <span><img src="../assets/icons/microsoft-windows-22.svg" alt="Windows">Windows</span>
+                    <span><img src="../assets/icons/apple.svg" alt="Mac OS">Mac OS</span>
                     <span><img src="../assets/icons/command-line_115191.svg" alt="Command Line">Command Line</span>
                     <hr>
-                    <span><img src="../assets/icons/apache-seeklogo.com.svg" alt="">Apache</span>
-                    <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="">NGINX</span>
-                    <span><img src="../assets/icons/mysql-svgrepo-com.svg" alt="">MySQL</span>
+                    <span><img src="../assets/icons/apache-seeklogo.com.svg" alt="Apache">Apache</span>
+                    <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="NGINX">NGINX</span>
+                    <span><img src="../assets/icons/mysql-svgrepo-com.svg" alt="MySQL">MySQL</span>
                     <span><img src="../assets/icons/sqlite_logo_icon_169724.svg" alt="SQLite">SQLite</span>
-                    <span><img src="../assets/icons/nodejs-icon.svg" alt="">Node.js</span>
+                    <span><img src="../assets/icons/nodejs-icon.svg" alt="Node.js">Node.js</span>
                     <hr>
-                    <span><img src="../assets/icons/php-1.svg" alt="">PHP</span>
-                    <span><img src="../assets/icons/python-svgrepo-com.svg" alt="">Python</span>
-                    <span><img src="../assets/icons/java-14.svg" alt="">Java</span>
+                    <span><img src="../assets/icons/php-1.svg" alt="PHP">PHP</span>
+                    <span><img src="../assets/icons/python-svgrepo-com.svg" alt="Python">Python</span>
+                    <span><img src="../assets/icons/java-14.svg" alt="Java">Java</span>
                     <hr>
-                    <span><img src="../assets/icons/laravel-svgrepo-com.svg" alt="">Laravel</span>
-                    <span><img src="../assets/icons/symfony-svgrepo-com.svg" alt="">Symfony</span>
-                    <span><img src="../assets/icons/magento-2.svg" alt="">Magento</span>
-                    <span><img src="../assets/icons/wordpress-icon-1.svg" alt="">WordPress</span>
-                    <span><img src="../assets/icons/django.svg" alt="">Django</span>
+                    <span><img src="../assets/icons/laravel-svgrepo-com.svg" alt="Laravel">Laravel</span>
+                    <span><img src="../assets/icons/symfony-svgrepo-com.svg" alt="Symfony">Symfony</span>
+                    <span><img src="../assets/icons/magento-2.svg" alt="Magento">Magento</span>
+                    <span><img src="../assets/icons/wordpress-icon-1.svg" alt="WordPress">WordPress</span>
+                    <span><img src="../assets/icons/django.svg" alt="Django">Django</span>
                     <span><img src="../assets/icons/yii.svg" alt="Yii">Yii</span>
                     <hr>
-                    <span><img src="../assets/icons/docker.svg" alt="">Docker</span>
-                    <span><img src="../assets/icons/vagrant.svg" alt="">Vagrant</span>
-                    <span><img src="../assets/icons/virtualbox.svg" alt="">VirtualBox</span>
+                    <span><img src="../assets/icons/docker.svg" alt="Docker">Docker</span>
+                    <span><img src="../assets/icons/vagrant.svg" alt="Vagrant">Vagrant</span>
+                    <span><img src="../assets/icons/virtualbox.svg" alt="VirtualBox">VirtualBox</span>
                     <hr>
                 </div>
                 <div class="section">
                     <h3>Frontend</h3>
-                    <span><img src="../assets/icons/logo-javascript.svg" alt="">JavaScript</span>
-                    <span><img src="../assets/icons/vue-9.svg" alt="">Vue.js</span>
+                    <span><img src="../assets/icons/logo-javascript.svg" alt="JavaScript">JavaScript</span>
+                    <span><img src="../assets/icons/vue-9.svg" alt="Vue.js">Vue.js</span>
                     <span><img src="../assets/icons/jquery-4.svg" alt="jQuery">jQuery</span>
-                    <span><img src="../assets/icons/backbone-js.svg" alt="">Backbone.js</span>
+                    <span><img src="../assets/icons/backbone-js.svg" alt="Backbone.js">Backbone.js</span>
                     <hr>
-                    <span><img src="../assets/icons/html-1.svg" alt="">HTML 5</span>
-                    <span><img src="../assets/icons/css-3.svg" alt="">CSS</span>
+                    <span><img src="../assets/icons/html-1.svg" alt="HTML 5">HTML 5</span>
+                    <span><img src="../assets/icons/css-3.svg" alt="CSS">CSS</span>
                     <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span>
                     <hr>
-                    <span><img src="../assets/icons/tailwind-css-2.svg" alt="">Tailwindcss</span>
-                    <span><img src="../assets/icons/bootstrap-5-1.svg" alt="">Bootstrap</span>
-                    <hr>                 
+                    <span><img src="../assets/icons/tailwind-css-2.svg" alt="Tailwindcss">Tailwindcss</span>
+                    <span><img src="../assets/icons/bootstrap-5-1.svg" alt="Bootstrap">Bootstrap</span>
+                    <hr>
                     <h3>Development Tools</h3>
                     <span><img src="../assets/icons/phpstorm-1.svg" alt="PhpStorm">PhpStorm</span>
                     <span><img src="../assets/icons/vscode_icon_130084.svg" alt="VS Code">VS Code</span>
