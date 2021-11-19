@@ -18,8 +18,6 @@ async function submitForm() {
         !validateInput(subject.value) ||
         !validateInput(comment.value)) {
         has_error.value = true;
-        const error_msg = document?.getElementById("error_msg")?.offsetTop;
-        window.scrollTo({ 'top': error_msg + 70 });
         return
     }
 
