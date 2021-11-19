@@ -1,6 +1,9 @@
 {
-  "name": "frontend",
+  "name": "ants_app",
   "version": "0.0.0",
+  "description": "ants_app",
+  "author": "Antenh Kibret <antenh.kibret@gmail.com> (www.antenh.com)",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,16 +11,21 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^0.24.0",
     "vue": "^3.2.16",
+    "vue-axios": "^3.4.0",
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.2",
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.9",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
     "tailwindcss": "^2.2.16",
     "typescript": "^4.4.3",
     "vite": "^2.6.0",
     "vue-tsc": "^0.3.0"
-  }
+  },
+  "private": true
 }

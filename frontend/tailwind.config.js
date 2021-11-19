@@ -4,10 +4,16 @@ module.exports = {
   ],
   darkMode: 'media', // or 'media' or 'class' or false
   theme: {
-    extend: {},
+    extend: {
+      scale: {
+        '102': '1.02'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      transform: ['hover', 'focus'], 
+    },
   },
   plugins: [],
 }
