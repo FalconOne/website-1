@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 footer {
-    @apply flex flex-row justify-center items-center relative w-screen bg-gray-900 max-w-6xl text-center text-sm;
+    @apply flex flex-row justify-center items-center relative bg-gray-900 text-center text-sm;
     .content {
         @apply flex flex-col flex-wrap z-50 text-sm text-center;
     }
