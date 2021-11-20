@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import axios from 'axios';
+import { ref } from "vue";
+import axios from "axios";
 
 let first_name = ref(''),
     last_name  = ref(''),
@@ -8,17 +8,19 @@ let first_name = ref(''),
     phone      = ref(''),
     subject    = ref(''),
     comment    = ref(''),
-
     is_sending = ref(false),
-    has_error  = ref(false);
+    has_error  = ref(false),
+    thank_you  = ref(false);
 
 async function submitForm() {
-    if (!validateInput(first_name.value) ||
+    if (
+        !validateInput(first_name.value) ||
         !validateInput(email.value) ||
         !validateInput(subject.value) ||
-        !validateInput(comment.value)) {
+        !validateInput(comment.value)
+    ) {
         has_error.value = true;
-        return
+        return;
     }
 
     is_sending.value = true;
@@ -31,12 +33,16 @@ async function submitForm() {
         subject   : subject.value,
         comment   : comment.value,
     }).then(function (response) {
-        return response.data.msg;
-    })
-        .catch(function (error) {
-            return error.response.data;
-        })
+        is_sending.value = false;
 
+        if ( response.data.msg == 'success' ) {
+            thank_you.value = true;
+        }
+    })
+    .catch(function (error) {
+        return error.response.data;
+    })
+    
     resetForm();
 }
 
@@ -57,11 +63,8 @@ function resetForm() {
         <h1>Contact Me</h1>
         <form action="#" method="post" class="contact-form">
             <div v-show="has_error" class="error-msg" id="error_msg">
-                <p>
-                    <span>*</span>Oh, please fill all required fields.
-                </p>
+                <p><span>*</span>Oh, please fill all required fields.</p>
             </div>
-            <div v-show="is_sending" class="sending">Sendig...</div>
             <fieldset>
                 <div class="form-group">
                     <label for="first_name" class="required">
@@ -111,7 +114,7 @@ function resetForm() {
                 <div class="form-group">
                     <!-- <label for="topic" class="required">Topic<span>*</span>
                         <select name="topic" id="topic">
-                            <option value="" selected disabled hidden>Select one!</option>
+                            <option value='' selected disabled hidden>Select one!</option>
                             <option value="suggest">Suggestions</option>
                             <option value="bussines">Project / Work</option>
                             <option value="testimony">Testimony</option>
@@ -143,21 +146,51 @@ function resetForm() {
                     </label>
                 </div>
                 <div class="form-group">
-                    <input type="button" value="Submit" class="submit-btn" @click="submitForm" />
+                    <input
+                        type="button"
+                        value="Submit"
+                        class="submit-btn"
+                        @click="submitForm"
+                    />
                 </div>
             </fieldset>
+            <div v-show="is_sending" class="sending">
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+                Sending...<br />
+            </div>
+            <div v-show="thank_you" class="thank-you">
+                <img src="../assets/icons/check-solid.svg" alt="Check Mark">
+                <h3>Thank you for reaching out.</h3>
+                <p>I'm looking forward to reading your message.<br>
+                </p>
+            </div>
         </form>
     </div>
 </template>
-   
+
 <style lang="scss" scoped>
 .contact {
     @apply flex flex-col justify-center items-center relative;
     .contact-form {
-        @apply flex flex-col justify-center items-center my-5 p-6 bg-gradient-to-r rounded-md from-indigo-900 to-pink-900 drop-shadow-2xl;
-        .error-msg,
-        .sending {
-            @apply w-full h-full text-gray-200 bg-red-800 p-1 rounded-sm border-solid border border-red-600;
+        @apply flex flex-col justify-center items-center relative my-5 p-6 bg-gradient-to-r rounded-md from-indigo-900 to-pink-900 drop-shadow-2xl;
+        .error-msg {
+            @apply w-full h-full text-gray-200 bg-gradient-to-r from-red-800 to-red-700 p-1 rounded-sm filter drop-shadow-md;
+        }
+        .sending,
+        .thank-you {
+            @apply w-full h-full absolute flex flex-col justify-center items-center text-gray-200 bg-gradient-to-r from-indigo-800 to-green-800 rounded-sm;
+        }
+        .thank-you {
+            img {
+                @apply w-16
+            }
+            h3, p {
+                @apply mt-3
+            }
+
         }
         .form-group {
             @apply flex flex-row gap-x-2 justify-start items-stretch mt-4;
@@ -205,6 +238,39 @@ function resetForm() {
                 }
             }
         }
+    }
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
     }
 }
 </style>

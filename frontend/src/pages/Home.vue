@@ -5,6 +5,7 @@
                 <div class="heading">
                     <figure>
                         <img
+                            class="profile-pic"
                             src="../assets/img/ant-profile-pic.jpg"
                             alt="Antenh"
                             width="100"
@@ -106,9 +107,6 @@
         @apply flex flex-row flex-wrap justify-center items-center p-6;
         .heading {
             @apply flex flex-row flex-wrap justify-evenly items-center w-full;
-            img {
-                @apply rounded-full w-32;
-            }
             h1 {
                 @apply text-5xl text-center bg-gradient-to-r from-pink-200 to-purple-300 bg-clip-text text-transparent;
             }
