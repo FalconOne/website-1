@@ -3,9 +3,18 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import MainNav from "./components/navigation/MainNav.vue";
 import Footer from "./components/Footer.vue";
+import { useMeta } from 'vue-meta'
+
+useMeta({
+    title: 'Hi, I\'m Antenh ',
+    htmlAttrs: { lang: 'en', amp: true }
+})
 </script>
 
 <template>
+    <metainfo>
+        <template v-slot:title="{ content }">{{ content ? `${content} | callmeant.com` : `callmeant.com` }}</template>
+    </metainfo>
     <header class="main-header"></header>
     <MainNav />
     <router-view v-slot="{ Component }">

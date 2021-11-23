@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import axios from "axios";
+import { useMeta } from 'vue-meta'
+
+useMeta({ 
+    title: 'Contact Me' 
+})
 
 let first_name = ref(''),
     last_name  = ref(''),
