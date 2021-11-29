@@ -40,7 +40,7 @@ nav {
             @apply ml-1.5 text-transparent bg-clip-text bg-gradient-to-r
                 text-gray-900
                 /* Dark Mode */
-                dark:from-gray-200 dark:to-gray-300;
+                dark:text-gray-100 dark:from-gray-200 dark:to-gray-300;
         }
         &:hover,
         &.router-link-active {
