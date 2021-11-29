@@ -29,9 +29,6 @@ nav {
         z-index: -1;
         transform: perspective(100px) rotateX(355deg);
         transform-origin: center bottom;
-        box-shadow: 0px 2px 10px 5px rgb(24, 25, 49);
-        background: #212327;
-        background: linear-gradient(135deg, rgb(43, 60, 83) 0%, rgb(24, 38, 58) 100%);
     }
     
     a {
@@ -41,14 +38,14 @@ nav {
         }
         > span.link-text {
             @apply ml-1.5 text-transparent bg-clip-text bg-gradient-to-r
-                from-blue-800 to-blue-900
+                text-gray-900
                 /* Dark Mode */
                 dark:from-gray-200 dark:to-gray-300;
         }
         &:hover,
         &.router-link-active {
             @apply border-b-4
-                border-blue-900
+                border-blue-800
                 /* Dark Mode */
                 dark:border-yellow-700;
         }
@@ -57,6 +54,26 @@ nav {
                 text-indigo-800
                 /* Dark Mode */
                 dark:text-yellow-300;
+        }
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    nav {
+        &::after {
+            box-shadow: 0px 2px 10px 5px rgb(138, 138, 146);
+            background: #babbbe;
+            background: linear-gradient(135deg, rgb(197, 198, 199) 0%, rgb(215, 221, 228) 100%);
+        }
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    nav {
+        &::after {
+            box-shadow: 0px 2px 10px 5px rgb(24, 25, 49);
+            background: #212327;
+            background: linear-gradient(135deg, rgb(43, 60, 83) 0%, rgb(24, 38, 58) 100%);
         }
     }
 }
