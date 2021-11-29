@@ -65,6 +65,7 @@
                     <span><img src="../assets/icons/docker.svg" alt="Docker">Docker</span>
                     <span><img src="../assets/icons/vagrant.svg" alt="Vagrant">Vagrant</span>
                     <span><img src="../assets/icons/virtualbox.svg" alt="VirtualBox">VirtualBox</span>
+                    <span><img src="../assets/icons/vmware.svg" alt="VMWare">VMWare</span>
                     <hr>
                 </div>
                 <div class="section">
@@ -86,6 +87,8 @@
                     <span><img src="../assets/icons/vscode_icon_130084.svg" alt="VS Code">VS Code</span>
                     <span><img src="../assets/icons/sublime-text.svg" alt="Sublime Text">Sublime Text</span>
                     <span><img src="../assets/icons/mysqlworkbench_93532.svg" alt="MySQL Workbench">MySQL Workbench</span>
+                    <span><img src="../assets/icons/git-icon.svg" alt="Git, Version Control System">Git</span>
+                    <span><img src="../assets/icons/bitbucket-icon.svg" alt="BitBucket">BitBucket</span>
                     <span><img src="../assets/icons/postman.svg" alt="Postman">Postman</span>
                     <hr>
                 </div>
