@@ -175,13 +175,22 @@ function resetForm() {
 .contact {
     @apply flex flex-col justify-center items-center relative;
     .contact-form {
-        @apply flex flex-col justify-center items-center relative my-5 p-6 bg-gradient-to-r rounded-md from-indigo-900 to-pink-900 drop-shadow-2xl;
+        @apply flex flex-col justify-center items-center relative my-5 p-6 bg-gradient-to-r rounded-md drop-shadow-2xl
+        from-indigo-200 to-red-200        
+        /* Dark */
+        dark:from-indigo-900 dark:to-pink-900;
         .error-msg {
-            @apply w-full h-full text-gray-200 bg-gradient-to-r from-red-800 to-red-700 p-1 rounded-sm filter drop-shadow-md;
+            @apply w-full h-full bg-gradient-to-r p-1 rounded-sm filter drop-shadow-md
+            text-black from-red-400 to-red-300
+            /* Dark */
+            dark:text-gray-200 dark:from-red-800 dark:to-red-700;
         }
         .sending,
         .thank-you {
-            @apply w-full h-full absolute flex flex-col justify-center items-center text-gray-200 bg-gradient-to-r from-indigo-800 to-green-800 rounded-sm;
+            @apply w-full h-full absolute flex flex-col justify-center items-center bg-gradient-to-r rounded-sm
+            text-gray-900 from-indigo-200 to-green-200
+            /* Dark */
+            dark:text-gray-200 dark:from-indigo-800 dark:to-green-800;
         }
         .thank-you {
             img {
@@ -198,7 +207,10 @@ function resetForm() {
             input,
             select,
             textarea {
-                @apply w-full text-sm text-gray-300;
+                @apply w-full text-sm
+                text-gray-800
+                /* Dark */
+                dark:text-gray-300;
             }
             label {
                 @apply mb-1 w-full;
@@ -209,7 +221,10 @@ function resetForm() {
                     input,
                     textarea,
                     select {
-                        @apply border-b-2 border-red-500 pb-2;
+                        @apply border-b-2 pb-2
+                        border-red-500
+                        /* Dark */
+                        dark:border-red-500;
                     }
                     span {
                         @apply text-red-500;
@@ -222,19 +237,29 @@ function resetForm() {
             input,
             textarea,
             select {
-                @apply mt-1 py-1 px-2 rounded-sm bg-gray-800 placeholder-gray-400 placeholder-opacity-50 filter drop-shadow-md shadow-lg transform transition-all duration-300 ease-in-out;
+                @apply mt-1 py-1 px-2 rounded-sm placeholder-opacity-50 filter drop-shadow-md shadow-lg transform transition-all duration-300 ease-in-out
+                bg-gray-200 placeholder-gray-600
+                /* Dark */
+                dark:bg-gray-800 dark:placeholder-gray-400;
                 &:focus {
-                    @apply outline-none ring-2 ring-gray-400 scale-x-102;
+                    @apply outline-none ring-2 scale-x-102
+                    ring-gray-800
+                    /* Dark */
+                    dark:ring-gray-400 ;
                 }
             }
             textarea {
                 min-height: 200px;
             }
             .submit-btn {
-                @apply bg-yellow-700;
+                @apply bg-indigo-600 text-gray-100 
+                dark:bg-yellow-700;
                 &:hover,
                 &:focus {
-                    @apply bg-indigo-400 text-gray-900 transform scale-105 cursor-pointer;
+                    @apply transform scale-105 cursor-pointer
+                    text-gray-900 bg-yellow-100
+                    /* Dark */
+                    dark:bg-indigo-300 dark:text-gray-900;
                 }
             }
         }

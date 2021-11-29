@@ -108,7 +108,10 @@
         .heading {
             @apply flex flex-row flex-wrap justify-evenly items-center w-full;
             h1 {
-                @apply text-5xl text-center bg-gradient-to-r from-pink-200 to-purple-300 bg-clip-text text-transparent;
+                @apply text-5xl text-center bg-gradient-to-r bg-clip-text text-transparent
+                from-pink-800 to-purple-900
+                /* Dark */
+                dark:from-pink-200 dark:to-purple-300;
             }
         }
         h2 {
@@ -117,19 +120,31 @@
         .btn-container {
             @apply mt-10;
             a {
-                @apply py-2 px-4 relative text-sm rounded-sm shadow-md bg-blue-900 
-                    transition transform-gpu duration-150 ease-in-out scale-110;
+                @apply py-2 px-4 relative text-sm rounded-sm shadow-md 
+                    transition transform-gpu duration-150 ease-in-out scale-110
+                    bg-purple-300
+                    /* Dark */
+                    dark:bg-blue-900;
                 &::before {
                     content: "";
-                    @apply absolute top-0 left-0 w-full h-full z-10 bg-gray-700 bg-opacity-5 transition-all duration-300;
+                    @apply absolute top-0 left-0 w-full h-full z-10 bg-opacity-5 transition-all duration-300
+                    bg-gray-200
+                    /* Dark */
+                    dark:bg-gray-700;
                 }
                 &::after {
                     content: "";
-                    @apply absolute top-0 left-0 w-full h-full z-10 opacity-0 transition-all duration-300 border-2 rounded-sm border-indigo-400 transform-gpu scale-110;
+                    @apply absolute top-0 left-0 w-full h-full z-10 opacity-0 transition-all duration-300 border-2 rounded-sm transform-gpu scale-110
+                    border-indigo-600
+                    /* Dark */
+                    dark:border-indigo-400;
                 }
                 &:hover,
                 &:focus {
-                    @apply transform scale-110 bg-pink-100 text-indigo-900 underline;
+                    @apply transform scale-110  underline
+                    bg-indigo-700 text-indigo-100
+                    /* Dark */
+                    dark:bg-pink-100 dark:text-indigo-900;
                     transform: scale(1, 1);
                 }
                 &:hover::before,
@@ -148,7 +163,10 @@
     }
 }
 .summary {
-    @apply flex flex-col justify-center items-center w-full bg-gradient-to-r from-blue-700 to-blue-800;
+    @apply flex flex-col justify-center items-center w-full bg-gradient-to-r
+    from-blue-100 to-blue-200
+    /* Dark */
+    dark:from-blue-700 dark:to-blue-800;
     .content {
         @apply flex flex-col flex-wrap justify-center items-center;
         p {
@@ -183,7 +201,7 @@
     }
 }
 .content {
-    @apply max-w-4xl p-6;
+    @apply max-w-4xl p-6 mx-auto;
 }
 .title {
     @apply w-full text-center; 
