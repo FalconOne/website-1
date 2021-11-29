@@ -25,7 +25,7 @@ async function submitForm() {
 
     is_sending.value = true;
 
-    const res = await axios.post('/apiapp/api/contact', {
+    const res = await axios.post('/app/api/contact', {
         first_name: first_name.value,
         last_name : last_name.value,
         email     : email.value,
