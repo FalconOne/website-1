@@ -77,4 +77,14 @@ nav {
         }
     }
 }
+
+
+@media (max-width: 640px) {
+    nav {
+        @apply w-full;
+        &::after { 
+            transform: none;
+        }
+    }
+}
 </style>
