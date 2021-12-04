@@ -6,16 +6,13 @@
 </template>
 
 <style lang="scss" scoped>
-    .not-found {
-        @apply flex flex-col my-12 text-center rounded-md drop-shadow-lg shadow-lg
-        bg-indigo-200 text-gray-800
-        /* Dark */
-        dark:bg-indigo-600 dark:text-white;
-
-        img {
-            @apply h-28;
-        }
-
+.not-found {
+    @apply flex flex-col my-12 text-center rounded-md drop-shadow-lg shadow-lg
+    bg-indigo-200 text-gray-800
+    /* Dark */
+    dark:bg-indigo-600 dark:text-white;
+    img {
+        @apply h-28;
     }
-
+}
 </style>
