@@ -1,3 +1,5 @@
+// TODO: Add lang="ts" attribute to script tag after 
+// issues with hcaptcha package are fixed
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
@@ -22,7 +24,7 @@ const captcha_verified = ref(false),
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 async function submitForm() {
-    resetForm();
+    has_error.value = false;
 
     if (
         !validateInput(first_name.value) ||
@@ -70,8 +72,15 @@ function validateInput(input) {
 }
 
 function resetForm() {
-    is_sending.value = false;
+    is_sending.value =
     has_error.value  = false;
+
+    first_name.value =
+    last_name.value  =
+    email.value      =
+    phone.value      =
+    subject.value    =
+    comment.value    = '';
 }
 
 function captchaVerify(token, eKey) {
