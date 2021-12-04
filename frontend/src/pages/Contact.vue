@@ -1,3 +1,5 @@
+// TODO: Add lang="ts" attribute to script tag after 
+// issues with hcaptcha package are fixed
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
