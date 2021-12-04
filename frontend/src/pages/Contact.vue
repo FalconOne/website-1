@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup>
 import { ref } from "vue";
 import axios from "axios";
 import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
@@ -56,13 +56,13 @@ async function submitForm() {
         }
     })
     .catch(function (error) {
-        return error.response.data;
+        return error.response;
     })
     
     resetForm();
 }
 
-function validateInput(input: any): boolean {
+function validateInput(input) {
     if (input.length > 1 && input != '') {
         return true;
     }
@@ -74,7 +74,7 @@ function resetForm() {
     has_error.value  = false;
 }
 
-function captchaVerify(token:any, eKey:any) {
+function captchaVerify(token, eKey) {
     captcha_verified.value = true;
     captcha_token.value    = token;
     captcha_eKey.value     = eKey;
@@ -88,7 +88,7 @@ function captchaExpired() {
     captcha_expired.value  = true;
 }
 
-function captchaError(error: any) {
+function captchaError(error) {
     captcha_token.value = '';
     captcha_eKey.value  = '';
     captcha_error.value = error;
