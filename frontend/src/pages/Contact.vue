@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import axios from "axios";
+import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
 
 let first_name = ref(''),
     last_name  = ref(''),
@@ -12,7 +13,17 @@ let first_name = ref(''),
     has_error  = ref(false),
     thank_you  = ref(false);
 
+const captcha_verified = ref(false),
+      captcha_expired  = ref(false),
+      captcha_token    = ref(""),
+      captcha_eKey     = ref(""),
+      captcha_error    = ref(false);
+
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 async function submitForm() {
+    resetForm();
+
     if (
         !validateInput(first_name.value) ||
         !validateInput(email.value) ||
@@ -20,6 +31,11 @@ async function submitForm() {
         !validateInput(comment.value)
     ) {
         has_error.value = true;
+        return;
+    }
+
+    if ( !captcha_verified.value || !captcha_token.value || !captcha_eKey.value) {
+        captcha_error.value = true;
         return;
     }
 
@@ -55,7 +71,27 @@ function validateInput(input: any): boolean {
 
 function resetForm() {
     is_sending.value = false;
-    has_error.value = false;
+    has_error.value  = false;
+}
+
+function captchaVerify(token:any, eKey:any) {
+    captcha_verified.value = true;
+    captcha_token.value    = token;
+    captcha_eKey.value     = eKey;
+    captcha_error.value    = false;
+}
+
+function captchaExpired() {
+    captcha_verified.value = false;
+    captcha_token.value    = '';
+    captcha_eKey.value     = '';
+    captcha_expired.value  = true;
+}
+
+function captchaError(error: any) {
+    captcha_token.value = '';
+    captcha_eKey.value  = '';
+    captcha_error.value = error;
 }
 </script>
 <template>
@@ -145,6 +181,18 @@ function resetForm() {
                         ></textarea>
                     </label>
                 </div>
+                <vue-hcaptcha 
+                    sitekey="9f0c5779-b36e-414c-9e7f-a56d10094413"
+                    :theme="isDarkMode ? 'dark' : 'light'"
+                    @verify="captchaVerify"
+                    @expired="captchaExpired"
+                    @challenge-expired="captchaExpired"
+                    @error="captchaError"
+                >
+                </vue-hcaptcha>
+                <div v-show="captcha_error" class="captcha-error">
+                    <p>Please check "I am human" checkbox.</p>
+                </div>
                 <div class="form-group">
                     <input
                         type="button"
@@ -181,6 +229,12 @@ function resetForm() {
         dark:from-indigo-900 dark:to-pink-900;
         .error-msg {
             @apply w-full h-full bg-gradient-to-r p-1 rounded-sm filter drop-shadow-md
+            text-black from-red-400 to-red-300
+            /* Dark */
+            dark:text-gray-200 dark:from-red-800 dark:to-red-700;
+        }
+        .captcha-error {
+            @apply w-full h-full mt-4 bg-gradient-to-r p-1 rounded-sm filter 
             text-black from-red-400 to-red-300
             /* Dark */
             dark:text-gray-200 dark:from-red-800 dark:to-red-700;
