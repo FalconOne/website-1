@@ -8,7 +8,7 @@
                 </a>
                 <a href="https://stackoverflow.com/users/2059615/falconone"><img src="../assets/icons/stack-overflow.svg" alt="Stack Overflow: FalconOne"></a>
             </div>
-            <p class="copyright">Copyright&copy; 2021 www.callmeant.com</p>
+            <p class="copyright">&copy; 2021 callmeant.com</p>
         </div>
     </footer>
 </template>
