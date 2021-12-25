@@ -43,7 +43,7 @@ async function submitForm() {
 
     is_sending.value = true;
 
-    const res = await axios.post('/app/api/contact', {
+    const res = await axios.post('http://127.0.0.1:8000/app/api/contact', {
         first_name: first_name.value,
         last_name : last_name.value,
         email     : email.value,
@@ -190,15 +190,17 @@ function captchaError(error) {
                         ></textarea>
                     </label>
                 </div>
-                <vue-hcaptcha 
-                    sitekey="9f0c5779-b36e-414c-9e7f-a56d10094413"
-                    :theme="isDarkMode ? 'dark' : 'light'"
-                    @verify="captchaVerify"
-                    @expired="captchaExpired"
-                    @challenge-expired="captchaExpired"
-                    @error="captchaError"
-                >
-                </vue-hcaptcha>
+                <div class="form-group">
+                    <vue-hcaptcha 
+                        sitekey="9f0c5779-b36e-414c-9e7f-a56d10094413"
+                        :theme="isDarkMode ? 'dark' : 'light'"
+                        @verify="captchaVerify"
+                        @expired="captchaExpired"
+                        @challenge-expired="captchaExpired"
+                        @error="captchaError"
+                    >
+                    </vue-hcaptcha>
+                </div>
                 <div v-show="captcha_error" class="captcha-error">
                     <p>Please check "I am human" checkbox.</p>
                 </div>

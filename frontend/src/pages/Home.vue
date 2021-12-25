@@ -78,7 +78,7 @@
                     <span><img src="../assets/icons/backbone-js.svg" alt="Backbone.js">Backbone.js</span>
                     <span><img src="../assets/icons/typescript.svg" alt="TypeScript">TypeScript</span>
                     <hr>
-                    <span><img src="../assets/icons/html-1.svg" alt="HTML 5">HTML 5</span>
+                    <span><img src="../assets/icons/html-1.svg" alt="HTML">HTML</span>
                     <span><img src="../assets/icons/css-3.svg" alt="CSS">CSS</span>
                     <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span>
                     <hr>
