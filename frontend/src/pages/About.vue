@@ -7,116 +7,63 @@
             <h1>About me</h1>
             <article>
                 <img class="profile-pic" src="../assets/img/ant-profile-pic.jpg" alt="">      
-                <p class="max-w-lg text-center p-2">My name is Antenh. I've been programming web for 11+ years.<br> I specializing in Back-end development, eCommerce websites, and front-end development.</p>
-
+                <p class="max-w-lg text-center p-2">My name is Antenh. I'm experienced fullstack web developer with 11+ years.
+                I specializing in backend and API development, eCommerce websites, and front-end development.</p>
+                <h2>Backend</h2>
                 <div class="section">
-                    <h2>Application Deployment</h2>
-                    <p>
-                        Application deployment on Linux server.
-                        Ubuntu, CentOS of my development enviroments are currently run with Docker
-                    </p>    
-                </div>
-
-                <div class="section">
-                    <h2>Server Technologies</h2>
                     <p>I'm well versed in all aspects of application setup and deployment to production and creating development enviroments.</p>
                     <ul>
-                        <li>Cloud providors: AWS / AWS CLI, Linode</li>
-                        <li>OS: Linux, Ubuntu, CentOS</li>
-                        <li>Apache, NGINX</li>
-                        <li>SSL Certificates, Cypher, SSL Labs</li>
+                        <li>Cloud: <span><img src="../assets/icons/aws-logo.svg" alt="AWS">AWS</span>, <span><img src="../assets/icons/linode-1.svg" alt="Linode">Linode</span></li>
+                        <li>OS: <span><img src="../assets/icons/ubuntu-icon.svg" alt="Ubuntu">Ubuntu</span>, <span><img src="../assets/icons/centos-1.svg" alt="CentOS">CentOS</span></li>
+                        <li>Web Server: <span><img src="../assets/icons/apache-seeklogo.com.svg" alt="Apache">Apache</span>, <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="NGINX">NGINX</span></li>
+                        <li>Database: <span><img src="../assets/icons/mysql-svgrepo-com.svg" alt="MySQL">MySQL</span>, <span><img src="../assets/icons/sqlite_logo_icon_169724.svg" alt="SQLite">SQLite</span></li>
+                        <li>Languages: <span><img src="../assets/icons/php-1.svg" alt="PHP">PHP</span>, <span><img src="../assets/icons/python-svgrepo-com.svg" alt="Python">Python</span>, <span><img src="../assets/icons/c-program.svg" alt="C"></span></li>
+                        <li>Frameworks: <span><img src="../assets/icons/laravel-svgrepo-com.svg" alt="Laravel">Laravel</span>, <span><img src="../assets/icons/magento-2.svg" alt="Magento">Magento</span>, <span><img src="../assets/icons/symfony-svgrepo-com.svg" alt="Symfony">Symfony</span>, <span><img src="../assets/icons/django.svg" alt="Django">Django</span></li>
                     </ul>
                 </div>
+                <h2>Frontend</h2>
                 <div class="section">
-                    <h2>Backend</h2>
                     <ul>
-                        <li>PHP (OOP), Python, Bash Script</li>
-                        <li>Database Arcitecture, Modeiling, Programming</li>
-                        <li>RESTful API</li>
-                        <li>Frameworks: Laraval, Magento, Symfony, Django</li>
+                        <li><span><img src="../assets/icons/html-1.svg" alt="HTML">HTML</span>, <span><img src="../assets/icons/logo-javascript.svg" alt="JavaScript">JavaScript</span>, <span><img src="../assets/icons/typescript.svg" alt="TypeScript">TypeScript</span>, <span><img src="../assets/icons/css-3.svg" alt="CSS">CSS</span>, <span><img src="../assets/icons/sass-1.svg" alt="SASS">SASS</span></li>
+                        <li>Frameworks: <span><img src="../assets/icons/vue-9.svg" alt="Vue.js">Vue.js</span>, <span><img src="../assets/icons/backbone-js.svg" alt="Backbone.js">Backbone.js</span>, <span><img src="../assets/icons/bootstrap-5-1.svg" alt="Bootstrap">Bootstrap</span>, <span><img src="../assets/icons/tailwind-css-2.svg" alt="Tailwindcss">Tailwindcss</span></li>
                     </ul>
                 </div>
+                <h2>eCommerece</h2>
                 <div class="section">
-                    <h2>Frontend Technologies</h2>
-                    <p>I'm well versed in all aspects of application setup and deployment to production and creating development enviroments.</p>
-
-                    <ul>
-                        <li>HTML, JavaScript, CSS / SASS</li>
-                        <li>Frameworks: Vue.js, Backbone.js, Bootstrap, <span><img src="../assets/icons/tailwind-css-2.svg" alt="Tailwindcss">Tailwindcss</span></li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h2>eCommerece</h2>
                     <p>
-                        From development to deployment and everything in between.<br>
-                        <span class="svg-container"><img src="../assets/icons/magento-2.svg" alt="Magento">Magento</span>
+                        From development to deployment and everything in between.
                     </p>
                     <ul>
                         <li>Design & Build web UI components</li>
-                    </ul>
-                    <h4>Other</h4>
-                    <ul>
-                        <li>Magento</li>
-                        <li>Authorize.NET</li>
-                        <li>Spreedly</li>
-                        <li>MailChimp</li>
-                        <li>SendGrid</li>
-                        <li>Twilio</li>
-                        <li>Google Analytcs</li>
-                    </ul>                    
+                        <li>Payment System & Gateway Integration</li>
+                        <li>Transactional emails integrations</li>
+                        <li>Text Messaging integrations</li>
+                        <li>UI & UX design</li>
+                        <li>Analytcs integrations and Reporting</li>
+                    </ul>                 
                 </div>
+                <h2>Security</h2>
                 <div class="section">
-                    <h2>eCommerece</h2>
                     <p>
-                        eCommerce(eComm) has been my career for past 8+ years. My experience in eCommerce is in backend development primarly, but not limited to. I've an extensive knowledge on Integrating payment systems, Content Management Systems (CMS) like MailChimp and Twilio. As well coding UI.
-                    </p>
-                    <h3>Contact</h3>
-                </div>
-                <div class="section">
-                    <h2>My Philosophy</h2>
-                    <p>
-                        As programmer my goal is to write, clean, simple, efficient & readable code. Now it's probably every programmers goal. For me it can be the metric that will allow my clients to be productive and spend less time & money.
-                    </p>
-                    <p>
-                        # # #<br>
-                        Bussiness sense, every business will have to make the decisions that make sense to them. Every business is different and it needs attention in different arias of production. Weather there are budget constraints, level of talent, or special needs, it's import to able to establish the needs of the client first.
-                    </p>
-                </div>
-                <div class="section">
-                    <h2>Security</h2>
-                    Security is very important part of an application, espcially now more than ever. It's at most impornce to me, as I work with client that utilize various technologies to obtain & store customer data. The security measures & patterns must be sound and secure, and make business sense.
-                    <br>
-                    <br>
-                    <ul>
-                        <li>Tech. SSL Labs.</li>
-                        <li>Installing SSL Certificates</li>
-                        <li>Aquairing, Configuring, Apache Communication Cypher
-                        </li>
-                        <li>application configurations.</li>
-                    </ul>                    
+                        Security is very important part of an application, espcially now more than ever. I work with client that utilize various technologies to obtain & store customer data. The security measures & patterns must be sound and secure, and make business sense.
+                    </p>                  
                 </div>
             </article>
             <article>
+                <h2>About this site</h2>
                 <div class="section">
-                    <h2>About this site</h2>
                     <p>
-                        Built with: <br>
-                        <span><img src="../assets/icons/vue-9.svg" alt="Vue.js">Vue.js</span> with  <span><img src="../assets/icons/typescript.svg" alt="TypeScript">TypeScript</span>, <span class="svg-container"><img src="../assets/icons/vitejs.svg" alt="Vite JS">Vite</span>, 
+                        Built with: <span><img src="../assets/icons/vue-9.svg" alt="Vue.js">Vue.js</span> with  <span><img src="../assets/icons/typescript.svg" alt="TypeScript">TypeScript</span>, <span class="svg-container"><img src="../assets/icons/vitejs.svg" alt="Vite JS">Vite</span>, 
                         <span class="svg-container"><img src="../assets/icons/django.svg" alt="Django">Django</span>, <span><img src="../assets/icons/nginx-svgrepo-com.svg" alt="NGINX">NGINX</span>, <span><img src="../assets/icons/tailwind-css-2.svg" alt="Tailwindcss">Tailwindcss</span>.
                     </p>
-                </div>
-                <div class="section">
                     <h3>Site feature:</h3>
                     <ul>
-                        <li>Secure Contact Form</li>
+                        <li>Secure Contact Form</li>                        
+                        <li>SSL Certifcate from <a href="https://letsencrypt.org/">Let's Encrypt</a></li>
                         <li>Auto Dark Mode, using <code>--prefed-color-scheme</code> feature</li>
                         <li>Accessablity. Lighthouse report score<img src="../assets/img/accessibility-score-callmeant.com.png" alt=""></li>
-                        <li>SEO</li>
-                        <li>SSL Certifcate from <a href="https://letsencrypt.org/">Let's Encrypt</a> </li>
                     </ul>
-                </div>
-                <div class="section">
-                    <h3>SVG icons obtained from these website:</h3>
+                    <h3>SVG Icons obtained from these website:</h3>
                     <ul>
                         <li><a href="https://icon-icons.com/">https://icon-icons.com/</a></li>
                         <li><a href="https://worldvectorlogo.com/">https://worldvectorlogo.com/</a></li>
@@ -124,7 +71,6 @@
                         <li><a href="https://freeicons.io/">https://freeicons.io/</a></li>
                     </ul>
                 </div>
-
             </article>
         </section>
     </div>
@@ -144,11 +90,14 @@
         figure {
             @apply text-left;
         }
-        h2, h3 {
+        h2 {
             @apply mt-5 pb-2 border-b-2 border-purple-500 rounded-sm;
         }
+        h3 {
+            @apply mt-3 pb-2 border-b-2 border-pink-500 rounded-sm;
+        }
         .section {
-            @apply w-full;
+            @apply w-full pl-3;
             ul {
                 @apply pl-10;
             }
@@ -160,8 +109,11 @@
             }
         }
         ul {
-            @apply w-full list-disc mt-4 float-left;
+            @apply w-full list-disc mt-2 float-left;
             list-style-type: square;
+            li {
+                @apply mt-2;
+            }
         }
         span {
             img {
