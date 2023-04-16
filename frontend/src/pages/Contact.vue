@@ -43,7 +43,7 @@ async function submitForm() {
 
     is_sending.value = true;
 
-    const res = await axios.post('http://127.0.0.1:8000/app/api/contact', {
+    const res = await axios.post('https://callmeant.com/app/api/contact', {
         first_name: first_name.value,
         last_name : last_name.value,
         email     : email.value,
