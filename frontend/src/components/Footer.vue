@@ -18,10 +18,11 @@
     @apply fill-current text-gray-300 dark:text-gray-900
 }
 footer {
-    @apply flex flex-col justify-center items-center relative text-center text-sm 
+    @apply flex-1 flex-col h-full justify-center items-center relative text-center text-sm 
     bg-gray-300
     /* Dark */
     dark:bg-gray-900;
+    margin-top: -1px;
     .content {
         @apply flex flex-col flex-wrap z-50 text-sm text-center;
         .social {

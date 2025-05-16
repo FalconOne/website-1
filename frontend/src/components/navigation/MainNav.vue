@@ -2,22 +2,22 @@
     <nav class="main-nav shape">
         <router-link :to="{ name: 'home' }">
             <i class="fas fa-home"></i>
-            <span class="link-text">Home</span>
+            <span class="link-text">About</span>
         </router-link>
         <router-link :to="{ name: 'contact' }">
             <i class="fas fa-envelope"></i>
             <span class="link-text">Contact</span>
         </router-link>
-        <router-link :to="{ name: 'about' }">
+        <!-- <router-link :to="{ name: 'about' }">
             <i class="fas fa-address-card"></i>
             <span class="link-text">About</span>
-        </router-link>
+        </router-link> -->
     </nav>
 </template>
 
 <style lang="scss" scoped>
 nav {
-    @apply w-80 grid grid-cols-3 mb-4 mx-auto p-0 text-center sticky top-0 z-50;
+    @apply w-80 grid grid-cols-2 mb-4 mx-auto p-0 text-center sticky top-0 z-50;
     &::after {
         @apply absolute w-full h-full top-0 left-0
             rounded-none rounded-br-sm rounded-bl-sm bg-gradient-to-b
