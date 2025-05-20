@@ -8,7 +8,7 @@ For example: CSS is applied using `@apply` keyworod inside `<style>` tag, which 
 
  Tech Stack: 
   - Django
-  - Vue.js
+  - Vue.js with TypeScript
   - Vite
   - TailwindCSS
 
