@@ -6,6 +6,9 @@ import json
 
 from .models import Contact
 
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
 @csrf_exempt
 def contact(request):
     if request.method == "POST":
