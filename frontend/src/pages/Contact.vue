@@ -167,6 +167,7 @@ function captchaError(error) {
                     </label>-->
                     <label for="subject" class="required">
                         Subject
+                        <span>*</span>
                         <input
                             v-model.trim="subject"
                             type="text"
