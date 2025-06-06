@@ -1,4 +1,4 @@
-# Ants Website
+# Website (Profile)
 
 This is a personal webiste built in 2021. 
 I use it to test frameworks and libraries. It allowes me to understand how quickly I can spin up, build and deploy using various framewokrs, libraries and functionalities.
