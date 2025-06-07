@@ -1,4 +1,4 @@
-# Website (Profile)
+# Personal Website
 
 This is a personal webiste built in 2021.
 
